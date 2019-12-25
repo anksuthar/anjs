@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chelp.component.scss']
 })
 export class ChelpComponent implements OnInit {
-
+   title = 'anjs chelp';
   constructor() { }
 
   ngOnInit() {
