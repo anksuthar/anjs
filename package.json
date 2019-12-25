@@ -1,15 +1,15 @@
 {
   "name": "anjs",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build  && nodemon ./server/bin/www",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
@@ -20,9 +20,17 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "bootstrap": "^4.4.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
     "ng2-slim-loading-bar": "^4.0.0",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.3",
+    "sequelize": "^5.21.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
