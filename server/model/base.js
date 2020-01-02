@@ -1,3 +1,5 @@
+var db = require('../config/db');
+
 exports.findAndCountAll = function (table, search, offset, limit) {
 	return table.findAndCountAll({
 		where: search,
@@ -9,8 +11,7 @@ exports.findAndCountAll = function (table, search, offset, limit) {
 };
 
 exports.createTabels = function () {
-	var sequelize = require('../config/sequelize');
-	return sequelize.sync({ force: false }).then(() => {
+	return db.sequelize.sync({ force: false }).then(() => {
 		return 'table create' ;
 	}).catch(error => {
 		throw error;
